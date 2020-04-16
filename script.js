@@ -57,13 +57,13 @@ searchMovie = (movie) => {
 // ShowMovie
 showMovie = (image, title, year, id) => {
   MOVIE_DISPLAY.innerHTML += `
-    <div class="card mr-3 mt-5 col-lg-5 p-0" style="width: 18rem;">
+    <div class="card mr-3 mt-5 mb-2 col-lg-5 p-0" style="width: 18rem;">
       <img class="card-img-top" src="${image}" alt="Card image cap">
       <div class="card-body">
-        <p class="h4">${title}</p>
+        <p class="h1 card-title text-center">${title}</p>
         <p class="card-text">${year}</p>
       </div>
-      <button type="button" class="btn btn-primary" onclick="seeMoreIsClicked('${image}', '${title}', '${year}', '${id}')" id="${id}">See more</button>
+      <button type="button" class="btn btn-dark p-3 lead" onclick="seeMoreIsClicked('${image}', '${title}', '${year}', '${id}')" id="${id}">See more</button>
     </div>
   `;
 };
@@ -88,7 +88,7 @@ seeMoreIsClicked = (image, title, year, id) => {
 showDescription = (image, title, year, description) => {
   MODAL_VIEW.style.display = "block";
   MODAL_CONTENT.innerHTML = `
-    <div class="col-sm">
+    <div class="col-sm ml-2">
       <img src="${image}" alt="No image" />
     </div>
     <div class="col-lg-8 text-justify">
