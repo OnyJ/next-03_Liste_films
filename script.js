@@ -44,7 +44,6 @@ searchMovie = (movie) => {
           threshold: [0.5],
         }
       );
-
       let items = document.querySelectorAll(".card");
       items.forEach(function (item) {
         item.classList.add("not-visible");
